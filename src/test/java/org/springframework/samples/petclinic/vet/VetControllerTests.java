@@ -70,7 +70,7 @@ public class VetControllerTests {
     public void testShowVetListHtml() throws Exception {
         mockMvc.perform(get("/vets.html"))
             .andExpect(status().isOk())
-            .andExpect(model().attributeExists("vets"))
+            .andExpect(model().attributeExists("vets___")) //broke test
             .andExpect(view().name("vets/vetList"));
     }
 
